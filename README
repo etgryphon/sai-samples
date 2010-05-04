@@ -1,0 +1,18 @@
+=== Welcome to the Sai-Samples  ===
+
+Examples of Sai functionality
+
+=== INSTALLATION ===
+
+In your frameworks directory, run:
+  git clone git://github.com/etgryphon/sproutcore-ui.git scui
+
+=== CONTRIBUTORS ===
+
+Main Architect: Evin Grano (@etgryphon)
+Contributors:
+  - Michael Cohen (@frozencanuck)
+
+=== LICENSE ===
+
+Sai-Samples is under the MIT License
