@@ -39,7 +39,10 @@ Samples.mainPage = SC.Page.design({
       circle2: Sai.Circle.create({
         x: 100,
         y: 100,
-        radius: 15
+        radius: 15,
+        fill: 'blue',
+        stroke: 'yellow',
+        strokeWidth: 5
       })
     })
   })
