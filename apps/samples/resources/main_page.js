@@ -11,7 +11,7 @@ Samples.mainPage = SC.Page.design({
   // Add childViews to this pane for views to display immediately on page 
   // load.
   mainPane: SC.MainPane.design({
-    childViews: 'labelView test1 test2 test3 test4'.w(),
+    childViews: 'labelView test1 test2 test3 test4 test5'.w(),
     
     labelView: SC.LabelView.design({
       layout: { top: 10, centerX: 0, width: 200, height: 18 },
@@ -82,6 +82,22 @@ Samples.mainPage = SC.Page.design({
         fill: 'lightblue',
         stroke: 'lightgreen',
         strokeWidth: 15
+      })
+    }),
+    
+    test5: Sai.CanvasView.design({
+      layout: { left: 50, right: 50, top: 700, height: 200 },
+      childElements: 'text1'.w(),
+      backgroundColor: 'red',
+      
+      text1: Sai.Text.create({
+        x: 500,
+        y: 100,
+        height: 50,
+        width: 150,
+        text: 'This is my text',
+        fill: 'lightblue',
+        stroke: 'lightgreen'
       })
     })
   })
