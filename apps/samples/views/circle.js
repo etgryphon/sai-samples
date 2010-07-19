@@ -1,6 +1,6 @@
 /*globals Samples Sai */
 
-Samples.TestView = Sai.CanvasView.extend({
+Samples.CircleView = Sai.CanvasView.extend({
   
   renderCanvas: function(canvas, firstTime) {
     if (firstTime) {
