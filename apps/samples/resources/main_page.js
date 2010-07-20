@@ -29,8 +29,9 @@ Samples.mainPage = SC.Page.design({
         { title: "Ellipses", value: 'Samples.ellipsePage.mainView' },
         { title: "Rectangles", value: 'Samples.rectanglePage.mainView' },
         { title: "Text", value: 'Samples.textPage.mainView' },
-        { title: "Polygon", value: 'Samples.polygonPage.mainView' },
-        { title: "Paths", value: 'Samples.pathPage.mainView' }
+        { title: "Polygons", value: 'Samples.polygonPage.mainView' },
+        { title: "Paths", value: 'Samples.pathPage.mainView' },
+        { title: "Images", value: 'Samples.imagePage.mainView' }
       ],
       itemTitleKey: 'title',
       itemValueKey: 'value'
