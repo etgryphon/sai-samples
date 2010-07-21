@@ -4,7 +4,6 @@ Samples.CircleView = Sai.CanvasView.extend({
   
   renderCanvas: function(canvas, firstTime) {
     if (firstTime) {
-      canvas.circle(100, 100, 50);
       var c = canvas.circle(80, 80, 50);
       c.set('fill', '#ff0000');
       c.set('id', 'blah');
