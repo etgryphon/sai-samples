@@ -10,7 +10,7 @@ Samples.circlePage = SC.Page.design({
   mainView: SC.View.design({
     classNames: ['circle-sample'],
     layout: { top: 30, left: 0, right: 0, bottom: 0 },
-    childViews: 'basic custom'.w(),
+    childViews: 'basic custom gradient'.w(),
     
     basic: Sai.CanvasView.design({
       layout: { left: 25, top: 20, height: 200, width: 465 },
@@ -36,6 +36,18 @@ Samples.circlePage = SC.Page.design({
       layerId: 'test-view',
       layout: { right: 25, top: 20, height: 200, width: 465 },
       backgroundColor: 'green'
+    }),
+    
+    gradient: Sai.CanvasView.design({
+      layout: { left: 25, top: 240, height: 200, width: 465 },
+      childElements: 'circle1'.w(),
+      backgroundColor: 'green',
+      circle1: Sai.Circle.create({
+        x: 232, 
+        y: 100, 
+        radius: 50,
+        fill: '90-#fff-#000'
+      })
     })
     
   })
