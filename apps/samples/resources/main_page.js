@@ -23,7 +23,7 @@ Samples.mainPage = SC.Page.design({
     sampleTab: SC.TabView.design({
   		layout: { top: 30, centerX: 0, width: 1024, bottom: 30 },
       classNames: ['sample-tabs'],
-      nowShowing: 'Samples.ellipsePage.mainView', 
+      nowShowing: 'Samples.polygonPage.mainView', 
       items: [
         { title: "Circles", value: 'Samples.circlePage.mainView' },
         { title: "Ellipses", value: 'Samples.ellipsePage.mainView' },

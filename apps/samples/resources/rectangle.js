@@ -23,7 +23,7 @@ Samples.rectanglePage = SC.Page.design({
         width: 150,
         fill: 'lightblue',
         stroke: 'lightgreen',
-        strokeWidth: 15
+        strokeWidth: 3
       })
     })
   })
