@@ -4,7 +4,7 @@
 // ==========================================================================
 /*globals Samples Sai*/
 // This page describes the main user interface for your application.  
-Samples.ellipsePage = SC.Page.design({
+Samples.ellipsesPage = SC.Page.design({
   
   mainView: SC.View.design({
     classNames: ['ellipse-sample'],

@@ -4,7 +4,7 @@
 // ==========================================================================
 /*globals Samples Sai*/
 // This page describes the main user interface for your application.  
-Samples.polygonPage = SC.Page.design({
+Samples.polygonsPage = SC.Page.design({
   
   mainView: SC.View.design({
     classNames: ['polygon-sample'],
@@ -25,7 +25,7 @@ Samples.polygonPage = SC.Page.design({
     }),
     
     basic1: Sai.CanvasView.design({
-      layout: { right: 25, top: 20, height: 236, width: 465 },
+      layout: { left: 25, top: 276, height: 236, width: 465 },
       childElements: 'example1'.w(),
       backgroundColor: 'yellow',
       

@@ -5,7 +5,7 @@
 /*globals Samples Sai*/
 sc_require('views/circle');
 // This page describes the main user interface for your application.  
-Samples.circlePage = SC.Page.design({
+Samples.circlesPage = SC.Page.design({
   
   mainView: SC.View.design({
     classNames: ['circle-sample'],
@@ -30,13 +30,7 @@ Samples.circlePage = SC.Page.design({
         stroke: 'yellow',
         strokeWidth: 5
       })
-    }),
-    
-    custom: Samples.CircleView.design({
-      layerId: 'test-view',
-      layout: { right: 25, top: 20, height: 200, width: 465 },
-      backgroundColor: 'green'
-    }),
+    }),  
     
     gradient: Sai.CanvasView.design({
       layout: { left: 25, top: 240, height: 200, width: 465 },
@@ -48,7 +42,13 @@ Samples.circlePage = SC.Page.design({
         radius: 50,
         fill: '90-#fff-#000'
       })
-    })
+    }),
+    
+    custom: Samples.CircleView.design({
+      layerId: 'test-view',
+      layout: { left: 25, top: 460, height: 200, width: 465 },
+      backgroundColor: 'green'
+    }),
     
   })
 });

@@ -4,5 +4,4 @@
 # ===========================================================================
 
 # Add initial buildfile information here
-config :'sai', :required => [:sproutcore]
-config :all, :required => [:'sai', :sproutcore]
+config :all, :required => [:sproutcore, :sai, :'sai/graphs']

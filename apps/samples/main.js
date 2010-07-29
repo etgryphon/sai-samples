@@ -19,11 +19,9 @@ Samples.main = function main() {
   // create multiple pages and panes.  
   Samples.getPath('mainPage.mainPane').append() ;
 
-  // Step 2. Set the content property on your primary controller.
-  // This will make your app come alive!
-
-  // TODO: Set the content property on your primary controller
-  // ex: Samples.contactsController.set('content',Samples.contacts);
+  // Step 2. Fill the types of basic shapes
+  Samples.basicSourceController.refresh();
+  Samples.graphsSourceController.refresh();
 
 } ;
 

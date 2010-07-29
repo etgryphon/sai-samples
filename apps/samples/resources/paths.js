@@ -3,18 +3,16 @@
 // Copyright: ©2010 Evin Grano and Contributors
 // ==========================================================================
 /*globals Samples Sai*/
-sc_require('views/circle');
 // This page describes the main user interface for your application.  
-Samples.pathPage = SC.Page.design({
+Samples.pathsPage = SC.Page.design({
   
   mainView: SC.View.design({
     classNames: ['path-sample'],
     layout: { top: 30, left: 0, right: 0, bottom: 0 },
     childViews: 'line triangle curve complex'.w(),
-    //childViews: 'line'.w(),
     
     line: Sai.CanvasView.design({
-      layout: { left: 25, top: 20, height: 200, width: 465 },
+      layout: { left: 10, top: 20, height: 200, width: 310 },
       childElements: 'line1 line2'.w(),
       backgroundColor: 'lightblue',
       line1: Sai.Path.create({
@@ -31,30 +29,30 @@ Samples.pathPage = SC.Page.design({
     }),
     
     triangle: Sai.CanvasView.design({
-      layout: { right: 25, top: 20, height: 200, width: 465 },
+      layout: { left: 330, top: 20, height: 200, width: 310 },
       childElements: 'path'.w(),
       backgroundColor: 'red',
       path: Sai.Path.create({
         fill: 'lightblue',
         stroke: 'lightgreen',
         strokeWidth: 5,
-        path: 'M50,10 L250,10 150,185 z'
+        path: 'M55,10 L255,10 155,185 z'
       })
     }),
     
     curve: Sai.CanvasView.design({
-      layout: { left: 25, top: 230, height: 200, width: 465 },
+      layout: { left: 10, top: 230, height: 200, width: 310 },
       childElements: 'path'.w(),
       backgroundColor: 'blue',
       path: Sai.Path.create({
         stroke: 'red',
         strokeWidth: 5,
-        path: 'M100,140 c100,-10 90,-100 200,0'
+        path: 'M10,140 c100,-10 90,-100 200,0'
       })
     }),
     
     complex: Sai.CanvasView.design({
-      layout: { right: 25, top: 230, height: 200, width: 465 },
+      layout: { left: 330, top: 230, height: 200, width: 310 },
       childElements: 'path1 path2'.w(),
       backgroundColor: 'yellow',
       path1: Sai.Path.create({
