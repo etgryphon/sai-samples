@@ -13,9 +13,9 @@ Samples.lineGraphsPage = SC.Page.design({
     childViews: 'basic'.w(),    
     
     basic: Sai.LineChartView.design({
-      layout: { left: 25, top: 20, height: 200, width: 465 },
-      backgroundColor: '#FFF',
-      data: [[[1,10], [10,25], [30,50], [50,100]], [[2, 5], [5,20], [15,25], [25,50], [90,100]]],
+      layout: { left: 25, top: 20, height: 300, width: 500 },
+      backgroundColor: 'pink',
+      data: [[[1,10], [20,50], [30,10], [50,100]], [[2, 5], [5,20], [15,25], [25,50], [90,100]]],
       dataAttrs: [{stroke: 'red', strokeWidth: 1}, {stroke: 'green', strokeWidth: 1}],
       grid: {color: 'lightgrey'},
       yaxis: {min: 0, max: 100, step: 5, weight: 1, color: 'black'},
