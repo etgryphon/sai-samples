@@ -22,7 +22,8 @@ Samples.graphsSourceController = SC.ArrayController.create(
     
   refresh: function(){
     var root = [
-      SC.Object.create({ name: "Line Graph", view: 'Samples.lineGraphsPage.mainView'})
+      SC.Object.create({ name: "Line Graph", view: 'Samples.lineGraphsPage.mainView'}),
+      SC.Object.create({ name: "Bar Graph", view: 'Samples.barGraphsPage.mainView'})
     ];
     
     this.set('content', root);
