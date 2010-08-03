@@ -26,7 +26,7 @@ Samples.barGraphsPage = SC.Page.design({
       layout: { left: 345, top: 20, height: 300, width: 300 },
       backgroundColor: 'yellow',
       data: [[5, 10, 15], [8, 9, 10], [20, 30, 40]],
-      dataAttrs: {barWidth: 20, barSpacing: 5, colors: ['red', 'green', 'blue']},
+      dataAttrs: {barWidth: 10, barSpacing: 5, colors: ['red', 'green', 'blue']},
       grid: {color: 'lightgrey'},
       yaxis: {step: 5, weight: 1, color: 'black'},
       xaxis: {color: 'black', labels: ['Morning', 'Afternoon', 'Evening']}
