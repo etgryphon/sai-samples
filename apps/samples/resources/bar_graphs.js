@@ -37,10 +37,10 @@ Samples.barGraphsPage = SC.Page.design({
     stacked: Sai.BarChartView.design({
       layout: { left: 25, top: 340, height: 300, width: 300 },
       backgroundColor: 'lightgreen',
-      data: [[5, 10, 15], [8, 9, 10], [20, 30, 40]],
-      dataAttrs: {stacked: true, barWidth: 20, colors: ['red', 'green', 'blue']},
+      data: [[5, 10, 15, 12], [8, 9, 10, 45], [20, 30, 40, 5]],
+      dataAttrs: {stacked: YES, barWidth: 20, colors: ['red', 'green', 'blue', 'purple']},
       grid: {color: 'lightgrey'},
-      yaxis: {step: 5, weight: 1, color: 'black'},
+      yaxis: {step: 10, weight: 1, color: 'black'},
       xaxis: {color: 'black', labels: ['Morning', 'Afternoon', 'Evening']}
     })
   })
