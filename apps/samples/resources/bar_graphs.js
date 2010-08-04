@@ -10,7 +10,7 @@ Samples.barGraphsPage = SC.Page.design({
   mainView: SC.View.design({
     classNames: ['bargraph-sample'],
     layout: { top: 0, left: 0, right: 0, bottom: 0 },
-    childViews: 'basic multi stacked'.w(),    
+    childViews: 'basic multi stacked stackedInput'.w(),    
     
     basic: Sai.BarChartView.design({
       layout: { left: 25, top: 20, height: 300, width: 300 },
@@ -37,11 +37,21 @@ Samples.barGraphsPage = SC.Page.design({
     stacked: Sai.BarChartView.design({
       layout: { left: 25, top: 340, height: 300, width: 300 },
       backgroundColor: 'lightgreen',
-      data: [[5, 10, 15, 12], [8, 9, 10, 45], [20, 30, 40, 5]],
+      //data: [[5, 10, 15, 12], [8, 9, 10, 45], [20, 30, 40, 5]],
+      dataBinding: 'Samples.graphController.dataArray',
       dataAttrs: {stacked: YES, barWidth: 20, colors: ['red', 'green', 'blue', 'purple']},
       grid: {color: 'lightgrey'},
       yaxis: {step: 10, weight: 1, color: 'black'},
       xaxis: {color: 'black', labels: ['Morning', 'Afternoon', 'Evening']}
+    }),
+    
+    stackedInput: SC.View.design({
+      layout: { left: 345, top: 340, height: 150, width: 300 },
+      childViews: 'text'.w(),
+      text: SC.TextFieldView.design({
+        layout: { left: 10, top: 10, right: 10, height: 22 },
+        valueBinding: 'Samples.graphController.content'
+      })
     })
   })
 });
