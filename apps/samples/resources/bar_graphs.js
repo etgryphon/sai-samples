@@ -19,7 +19,7 @@ Samples.barGraphsPage = SC.Page.design({
       dataAttrs: {barWidth: 25, color: 'green'},
       grid: {color: 'lightgrey'},
       yaxis: {step: 5, weight: 1, color: 'black'},
-      xaxis: {color: 'black', labels: ['Morning', 'Afternoon', 'Evening']}
+      xaxis: {color: 'black', labels: ['Early', 'Morning', 'Afternoon', 'Evening', 'Night'], labelAttrs: {fontSize: '9'}}
     }),
     
     multi: Sai.BarChartView.design({
