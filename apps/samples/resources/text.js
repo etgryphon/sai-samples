@@ -14,17 +14,70 @@ Samples.textPage = SC.Page.design({
     
     basic: Sai.CanvasView.design({
       layout: { left: 25, top: 20, height: 200, width: 465 },
-      childElements: 'text1'.w(),
+      childElements: 'rect1 text1 rect2 text2 rect3 text3'.w(),
       backgroundColor: 'red',
       
-      text1: Sai.Text.create({
-        x: 155,
-        y: 100,
+      rect1: Sai.Rectangle.create({
+        x: 10,
+        y: 10,
         height: 50,
         width: 150,
-        text: 'This is my text',
-        fill: 'lightblue',
-        stroke: 'lightgreen'
+        fill: 'white',
+        stroke: 'black'
+      }),
+      
+      text1: Sai.Text.create({
+        x: 10,
+        y: 10,
+        height: 50,
+        width: 150,
+        text: 'Normal Just-Left',
+        attrs: {
+          textAnchor: 'left'
+        },
+        fill: 'black'
+      }),
+      
+      rect2: Sai.Rectangle.create({
+        x: 175,
+        y: 10,
+        height: 50,
+        width: 150,
+        fill: 'white',
+        stroke: 'black'
+      }),
+      
+      text2: Sai.Text.create({
+        x: 175,
+        y: 10,
+        height: 50,
+        width: 150,
+        text: 'Normal Just-Right',
+        attrs: {
+          textAnchor: 'right'
+        },
+        fill: 'black'
+      }),
+      
+      rect3: Sai.Rectangle.create({
+        x: 10,
+        y: 85,
+        height: 50,
+        width: 150,
+        fill: 'white',
+        stroke: 'black'
+      }),
+      
+      text3: Sai.Text.create({
+        x: 10,
+        y: 85,
+        height: 50,
+        width: 150,
+        text: 'Normal Just-Center',
+        attrs: {
+          textAnchor: 'center'
+        },
+        fill: 'black'
       })
     })
   })
