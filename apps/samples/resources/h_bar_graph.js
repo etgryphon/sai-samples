@@ -4,7 +4,7 @@
 // ==========================================================================
 /*globals Samples Sai*/
 // This page describes the main user interface for your application.  
-Samples.barGraphsPage = SC.Page.design({
+Samples.hBarGraphsPage = SC.Page.design({
   
   mainView: SC.View.design({
     classNames: ['bargraph-sample'],
@@ -12,36 +12,36 @@ Samples.barGraphsPage = SC.Page.design({
     childViews: 'basic multi stacked stackedInput'.w(),
     
     basic: Sai.BarChartView.design({
-      layout: { left: 25, top: 0, height: 300, width: 300 },
+      layout: { left: 25, top: 0, height: 300, width: 450 },
       backgroundColor: 'pink',
       data: [5, 10, 87, 15, 56],
-      dataAttrs: {barWidth: 25, color: 'green'},
+      dataAttrs: {horizontal: YES, barWidth: 25, color: 'green'},
       grid: {color: 'lightgrey'},
-      yaxis: {step: 5, weight: 1, color: 'black'},
-      xaxis: {color: 'black', labels: ['Early', 'Morning', 'Afternoon', 'Evening', 'Night'], labelAttrs: {fontSize: '9'}}
+      yaxis: {color: 'black', buffer: 0.15, labelAttrs: {offset: -5, fontSize: '9'}, labels: ['Early', 'Morning', 'Afternoon', 'Evening', 'Night']},
+      xaxis: {color: 'black', step: 5, buffer: 0.05, weight: 1}
     }),
     
     multi: Sai.BarChartView.design({
-      layout: { left: 345, top: 0, height: 300, width: 500 },
+      layout: { left: 485, top: 0, height: 300, width: 450 },
       backgroundColor: 'yellow',
       //data: [[5, 30], [8, 10], [20, 6]],
       //data: [[5, 10, 15], [8, 9, 10], [20, 30, 40]],
       data: [[5, 10, 15, 5], [8, 9, 10, 12], [20, 30, 40, 10]],
-      dataAttrs: {barWidth: 10, barSpacing: 2, colors: ['red', 'green', 'blue', 'purple']},
+      dataAttrs: {horizontal: YES, barWidth: 10, barSpacing: 2, colors: ['red', 'green', 'blue', 'purple']},
       grid: {color: 'lightgrey'},
-      yaxis: {step: 5, weight: 1, hidden: YES, color: 'black'},
-      xaxis: {color: 'black', labels: ['Morning', 'Afternoon', 'Evening']}
+      yaxis: {color: 'black', buffer: 0.15, labelAttrs: {offset: -5}, labels: ['Morning', 'Afternoon', 'Night']},
+      xaxis: {color: 'black', hidden: YES, step: 5, buffer: 0.05, weight: 1}
     }),
     
     stacked: Sai.BarChartView.design({
-      layout: { left: 25, top: 320, height: 300, width: 300 },
+      layout: { left: 25, top: 320, height: 300, width: 600 },
       backgroundColor: 'lightgreen',
       //data: [[5, 10, 15, 12], [8, 9, 10, 45], [20, 30, 40, 5]],
       dataBinding: 'Samples.graphController.dataArray',
-      dataAttrs: {stacked: YES, barWidth: 20, colors: ['red', 'green', 'blue', 'purple']},
+      dataAttrs: {horizontal: YES, stacked: YES, barWidth: 20, colors: ['red', 'green', 'blue', 'purple']},
       grid: {color: 'lightgrey'},
-      yaxis: {step: 10, weight: 1, color: 'black'},
-      xaxis: {color: 'black', labels: ['Morning', 'Afternoon', 'Evening']}
+      yaxis: {color: 'black', buffer: 0.15, labelAttrs: {offset: -5}, labels: ['Early', 'Morning', 'Afternoon']},
+      xaxis: {color: 'black', hidden: YES, step: 5, buffer: 0.05, weight: 1}
     }),
     
     stackedInput: SC.TextFieldView.design({

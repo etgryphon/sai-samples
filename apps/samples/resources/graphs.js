@@ -2,7 +2,6 @@
 // Copyright: ©2009-2010 Evin Grano and Contributors
 // ==========================================================================
 /*globals Samples */
-sc_require('core');
 
 // This page describes the main user interface for your application.  
 Samples.graphsPage = SC.Page.design({
@@ -12,7 +11,7 @@ Samples.graphsPage = SC.Page.design({
     childViews: 'master detail'.w(),
     
     master: SC.ListView.design({
-      layout: { left: 10, top: 10, width: 250, bottom: 10 },
+      layout: { left: 10, top: 10, width: 150, bottom: 10 },
       rowHeight: 35,
       selectionBinding: 'Samples.graphsSourceController.selection',
       contentBinding: 'Samples.graphsSourceController',
@@ -23,9 +22,9 @@ Samples.graphsPage = SC.Page.design({
     }),
     
     detail: SC.SceneView.design({
-      layout: {top: 10, left: 260, right: 10, bottom: 10},
-      scenes: ['Samples.lineGraphsPage.mainView', 'Samples.barGraphsPage.mainView'],
-      nowShowing: 'Samples.barGraphsPage.mainView'
+      layout: {top: 10, left: 160, right: 10, bottom: 10},
+      scenes: ['Samples.lineGraphsPage.mainView', 'Samples.barGraphsPage.mainView', 'Samples.hBarGraphsPage.mainView'],
+      nowShowing: 'Samples.hBarGraphsPage.mainView'
     })
   })  
 });
