@@ -41,7 +41,7 @@ Samples.hBarGraphsPage = SC.Page.design({
       dataAttrs: {horizontal: YES, stacked: YES, barWidth: 20, colors: ['red', 'green', 'blue', 'purple']},
       grid: {color: 'lightgrey'},
       yaxis: {color: 'black', buffer: 0.15, labelAttrs: {offset: -5}, labels: ['Early', 'Morning', 'Afternoon']},
-      xaxis: {color: 'black', hidden: YES, step: 5, buffer: 0.05, weight: 1}
+      xaxis: {color: 'black', hidden: NO, steps: 50, buffer: 0.05, weight: 1}
     }),
     
     stackedInput: SC.TextFieldView.design({
