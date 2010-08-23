@@ -18,7 +18,7 @@ Samples.hBarGraphsPage = SC.Page.design({
       dataAttrs: {horizontal: YES, barWidth: 25, color: 'green'},
       grid: {color: 'lightgrey'},
       yaxis: {color: 'black', buffer: 0.15, labelAttrs: {offset: -5, fontSize: '9'}, labels: ['Early', 'Morning', 'Afternoon', 'Evening', 'Night']},
-      xaxis: {color: 'black', step: 5, buffer: 0.05, weight: 1}
+      xaxis: {color: 'black', step: 5, buffer: 0.1, labels: YES, weight: 1}
     }),
     
     multi: Sai.BarChartView.design({
@@ -30,7 +30,7 @@ Samples.hBarGraphsPage = SC.Page.design({
       dataAttrs: {horizontal: YES, barWidth: 10, barSpacing: 2, colors: ['red', 'green', 'blue', 'purple']},
       grid: {color: 'lightgrey'},
       yaxis: {color: 'black', buffer: 0.2, labelAttrs: {offset: -5}, labels: ['Morning', 'Afternoon', 'Night']},
-      xaxis: {color: 'black', hidden: YES, step: 5, buffer: 0.05, weight: 1}
+      xaxis: {color: 'black', step: 5, buffer: 0.1, weight: 1, labels: ['0', '5', '10', '15', '20', '25', '30', '35', '45']}
     }),
     
     stacked: Sai.BarChartView.design({
@@ -41,7 +41,7 @@ Samples.hBarGraphsPage = SC.Page.design({
       dataAttrs: {horizontal: YES, stacked: YES, barWidth: 20, colors: ['red', 'green', 'blue', 'purple']},
       grid: {color: 'lightgrey'},
       yaxis: {color: 'black', buffer: 0.15, labelAttrs: {offset: -5}, labels: ['Early', 'Morning', 'Afternoon']},
-      xaxis: {color: 'black', hidden: NO, steps: 50, buffer: 0.05, weight: 1}
+      xaxis: {color: 'black', hidden: NO, step: 5, buffer: 0.1, weight: 1, labels: {'5': 'blue', '50': 'red'}}
     }),
     
     stackedInput: SC.TextFieldView.design({
