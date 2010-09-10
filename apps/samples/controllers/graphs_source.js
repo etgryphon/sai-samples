@@ -24,7 +24,8 @@ Samples.graphsSourceController = SC.ArrayController.create(
     var root = [
       SC.Object.create({ name: "Line Graph", view: 'Samples.lineGraphsPage.mainView'}),
       SC.Object.create({ name: "Bar Graph", view: 'Samples.barGraphsPage.mainView'}),
-      SC.Object.create({ name: "H-Bar Graph", view: 'Samples.hBarGraphsPage.mainView'})
+      SC.Object.create({ name: "H-Bar Graph", view: 'Samples.hBarGraphsPage.mainView'}),
+      SC.Object.create({ name: "Pie Chart", view: 'Samples.pieChartPage.mainView'})
     ];
     
     this.set('content', root);
