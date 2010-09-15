@@ -14,6 +14,7 @@
 Samples.graphController = SC.ObjectController.create(
 /** @scope Samples.graphController.prototype */ {
   content: '[[5, 10, 15, 12], [8, 9, 10, 45], [20, 30, 40, 5]]',
+  number: 100, 
   dataArray: function(){
     var c = this.get('content'),
         dArray = [];
@@ -29,5 +30,16 @@ Samples.graphController = SC.ObjectController.create(
     }
     console.log('Content: %@ and Array: %@'.fmt(c, dArray));
     return dArray;
-  }.property('content').cacheable()
+  }.property('content').cacheable(),
+  
+  bigDataArray: function(){
+    var i, len = this.get('number'), rn, da = [];
+    
+    for (i = 0; i < len; i++){
+      rn = Math.floor(Math.random()*101);
+      da.push(rn);
+    }
+    
+    return da;
+  }.property('number').cacheable()
 });
